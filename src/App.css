@@ -21,7 +21,6 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 3rem;
-  
 }
 .sub-tittle {
   color: #ffffff;
@@ -50,7 +49,7 @@
 .date {
   color: #ffffff;
   font-size: 40px;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 
 .day-wedding {
@@ -58,16 +57,35 @@
   margin-bottom: 15px;
   color: #ffffff;
 }
+.map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+       rgba(0, 0, 0, 0.9)
+  ); /* Color de fondo */
+  padding: 20px;
+  
+}
+
+.map-iframe {
+  border: none;
+  width: 98%; /* Tamaño del mapa */
+  height: 800px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 20px;
+}
 @media (max-width: 1080px) {
   .tittle-hero {
     font-size: 200px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
-  .date{
+  .date {
     font-size: 40px;
   }
   .day-wedding {
     font-size: 90px;
-   
   }
   .tittles-hero {
     margin-bottom: -500px;
@@ -77,49 +95,46 @@
   .tittle-hero {
     font-size: 180px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
-  .date{
+  .date {
     font-size: 40px;
   }
   .day-wedding {
     font-size: 80px;
   }
- 
 }
 @media (max-width: 720px) {
   .tittle-hero {
     font-size: 150px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
-  .date{
+  .date {
     font-size: 30px;
   }
   .day-wedding {
     font-size: 70px;
-    margin-bottom:15px ;
+    margin-bottom: 15px;
   }
- 
 }
 @media (max-width: 500px) {
   .tittle-hero {
     font-size: 100px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
-  .date{
+  .date {
     font-size: 35px;
   }
   .day-wedding {
     font-size: 60px;
-    margin-bottom:23px ;
+    margin-bottom: 23px;
   }
- 
 }
 @media (max-width: 380px) {
   .tittle-hero {
     font-size: 70px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
-  .date{
+  .date {
     font-size: 30px;
   }
   .day-wedding {
     font-size: 50px;
-    margin-bottom:19px ;
+    margin-bottom: 19px;
   }
 }
