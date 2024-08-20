@@ -58,31 +58,32 @@
   color: #ffffff;
 }
 .map-section {
+  width: 100%;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0.7),
-       rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.9)
   ); /* Color de fondo */
-  padding: 20px;
-  
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .map-iframe {
   border: none;
-  width: 98%; /* Tamaño del mapa */
+  width: 96%; /* Tamaño del mapa */
   height: 500px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 .button-section {
   display: flex;
   justify-content: center;
   margin-top: 20px;
- 
+  width: 98%;
 }
 
 .route-button {
@@ -93,7 +94,8 @@ flex-direction: column;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  width: 360px;
+  width: 98%;
+  cursor: pointer;
 }
 
 .route-button:hover {
