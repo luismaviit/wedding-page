@@ -13,7 +13,6 @@
 }
 
 .hero-content {
-  
   z-index: 3;
   max-width: 100%;
   height: 100vh;
@@ -32,6 +31,7 @@
 }
 .tittles-hero {
   text-align: left;
+  margin-bottom: -300px;
 }
 .tittle-hero {
   margin-top: 30px;
@@ -39,28 +39,87 @@
   font-size: 250px;
   line-height: 0.8;
 }
+.two-section {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+.date {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight:lighter;
+}
+
+.day-wedding {
+  font-size: 100px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
 @media (max-width: 1080px) {
   .tittle-hero {
     font-size: 200px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+  .date{
+    font-size: 40px;
+  }
+  .day-wedding {
+    font-size: 90px;
+   
+  }
+  .tittles-hero {
+    margin-bottom: -500px;
   }
 }
 @media (max-width: 768px) {
   .tittle-hero {
     font-size: 180px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
+  .date{
+    font-size: 40px;
+  }
+  .day-wedding {
+    font-size: 80px;
+  }
+ 
 }
 @media (max-width: 720px) {
   .tittle-hero {
     font-size: 150px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
+  .date{
+    font-size: 30px;
+  }
+  .day-wedding {
+    font-size: 70px;
+    margin-bottom:15px ;
+  }
+ 
 }
 @media (max-width: 500px) {
   .tittle-hero {
     font-size: 100px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
+  .date{
+    font-size: 35px;
+  }
+  .day-wedding {
+    font-size: 60px;
+    margin-bottom:23px ;
+  }
+ 
 }
 @media (max-width: 380px) {
   .tittle-hero {
     font-size: 70px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+  .date{
+    font-size: 30px;
+  }
+  .day-wedding {
+    font-size: 50px;
+    margin-bottom:19px ;
   }
 }
