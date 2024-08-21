@@ -76,7 +76,7 @@ function App() {
           </div>
           <div className="two-section">
             <h3 className="date"> 16 Nov 2024</h3>
-            <button className="button-calendar" onClick={()=>addGoogleCalendarEvent}>
+            <button className="button-calendar" onClick={addGoogleCalendarEvent}>
               Agregar al calendario
               <i className="bi bi-calendar-plus-fill icon-calendar"></i>
             </button>
