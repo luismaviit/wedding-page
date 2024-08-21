@@ -69,6 +69,22 @@
   align-items: flex-end;
   justify-content: center;
   gap: 10px;
+  .button-calendar {
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    gap:10px;
+
+    .icon-calendar{
+        margin-left: 10px;
+    }
+  }
+  .button-calendar:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 .date {
   color: #ffffff;
@@ -89,7 +105,6 @@
   align-items: center;
   background-image: linear-gradient(
     rgba(0, 0, 0, 1),
-  
     rgba(0, 0, 0, 1)
   ); /* Color de fondo */
   padding-top: 20px;
@@ -115,7 +130,7 @@
   border: solid 1px #ffffff;
   color: #ffffff;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
   width: 98%;
@@ -126,13 +141,12 @@
 .route-button:hover {
   background-color: #0056b3;
   background-color: rgba(255, 255, 255, 0.3);
-
 }
 .container-info {
   background-color: black;
 }
 .row-biblical-quotation {
-  padding-top: 20px ;
+  padding-top: 20px;
   text-align: center;
   background-color: black;
   color: #ffffff;
@@ -165,7 +179,7 @@
   }
   .groom-history {
     margin-top: 20px;
-    
+
     .tittle-history {
       color: #ffffff;
       text-align: center;
@@ -187,7 +201,7 @@
       padding: 1rem;
       cursor: pointer;
     }
-    .button-whatsapp:hover{
+    .button-whatsapp:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
   }
@@ -217,7 +231,7 @@
       padding: 1rem;
       cursor: pointer;
     }
-    .button-whatsapp:hover{
+    .button-whatsapp:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
   }

@@ -15,7 +15,8 @@ function App() {
         message
       )}`;
       window.open(url, "_blank");
-    } if (n === 2) {
+    }
+    if (n === 2) {
       const phoneNumber = "+573225369150"; // Reemplaza con el número de teléfono deseado
       const message = "¡Hola! Keren quiero felicitarte"; // Mensaje predeterminado (opcional)
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -23,6 +24,16 @@ function App() {
       )}`;
       window.open(url, "_blank");
     }
+  };
+  const addGoogleCalendarEvent = () => {
+    const eventTitle = "Boda de Keren y Ruben";
+    const eventLocation = "Casa Campestre El Lote, Barranquilla, Colombia";
+    const eventDetails = "No te pierdas la boda de Keren y Ruben.";
+    const startDate = "20241116T210000Z"; // 16 de noviembre de 2024, 4:00 PM hora Colombia (UTC-5)
+    const endDate = "20241116T230000Z";   // 16 de noviembre de 2024, 6:00 PM hora Colombia (UTC-5)
+
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
+    window.open(url, "_blank");
   };
   return (
     <>
@@ -65,6 +76,10 @@ function App() {
           </div>
           <div className="two-section">
             <h3 className="date"> 16 Nov 2024</h3>
+            <button className="button-calendar" onClick={()=>addGoogleCalendarEvent}>
+              Agregar al calendario
+              <i className="bi bi-calendar-plus-fill icon-calendar"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -80,7 +95,6 @@ function App() {
               <br />
             </h3>
             <h1>Cantares 8:6</h1>
-            
           </div>
         </div>
         <div className="row bride-groom-info ">
@@ -102,7 +116,7 @@ function App() {
               <br />
               tan maravillosa a la que amar y por la que dejarse amar.
             </p>
-            <button className="button-whatsapp" onClick={()=>openWhatsApp(1)}>
+            <button className="button-whatsapp" onClick={() => openWhatsApp(1)}>
               Felicita el novio <i class="bi bi-whatsapp"></i>
             </button>
           </div>
@@ -119,7 +133,7 @@ function App() {
               <br />
               tan maravillosa a la que amar y por la que dejarse amar.
             </p>
-            <button className="button-whatsapp" onClick={()=>openWhatsApp(2)}>
+            <button className="button-whatsapp" onClick={() => openWhatsApp(2)}>
               Felicita la novia <i class="bi bi-whatsapp"></i>
             </button>
           </div>
