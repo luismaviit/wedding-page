@@ -16,7 +16,7 @@ function App() {
       )}`;
       window.open(url, "_blank");
     } if (n === 2) {
-      const phoneNumber = "+573128994670"; // Reemplaza con el número de teléfono deseado
+      const phoneNumber = "+573225369150"; // Reemplaza con el número de teléfono deseado
       const message = "¡Hola! Keren quiero felicitarte"; // Mensaje predeterminado (opcional)
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
         message
@@ -80,8 +80,7 @@ function App() {
               <br />
             </h3>
             <h1>Cantares 8:6</h1>
-            <h3 className="biblical-text">Mejores son dos que uno.</h3>
-            <h1>Eclesiastés 4:9</h1>
+            
           </div>
         </div>
         <div className="row bride-groom-info ">
@@ -152,6 +151,8 @@ function App() {
           </button>
         </div>
       </div>
+
+      {/* Formulario de asistencia */}
     </>
   );
 }
