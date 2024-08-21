@@ -21,7 +21,7 @@
   display: flex;
   gap: 20px;
   padding: 3rem;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 .span-button {
   color: #ffffff;
@@ -30,8 +30,8 @@
   padding: 1rem;
 }
 .span-button:hover {
- text-decoration: underline;
- color: #ffffff;
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .hero-content {
@@ -47,7 +47,7 @@
 }
 .tittles-hero {
   text-align: left;
-  margin-bottom: -200px;
+  margin-bottom: -160px;
 }
 .sub-tittle {
   color: #ffffff;
@@ -88,7 +88,7 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.9)
   ); /* Color de fondo */
@@ -111,19 +111,22 @@
 }
 
 .route-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px #ffffff;
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   width: 98%;
   cursor: pointer;
+  gap: 10px;
 }
 
 .route-button:hover {
   background-color: #0056b3;
+  background-color: rgba(255, 255, 255, 0.3);
+
 }
 .container-info {
   background-color: black;
@@ -144,6 +147,78 @@
     font-size: 50px;
     font-style: italic;
     font-weight: lighter;
+  }
+}
+
+.bride-groom-info {
+  background-color: #000;
+  padding: 10px;
+  padding: 30px;
+
+  .image-bride-groom {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 0px 50px 0px 50px;
+  }
+  .groom-history {
+    margin-top: 20px;
+    
+    .tittle-history {
+      color: #ffffff;
+      text-align: center;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 25px;
+    }
+    .text-groom {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: lighter;
+    }
+    .button-whatsapp {
+      background-color: transparent;
+      border: solid 1px #ffffff;
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .button-whatsapp:hover{
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  .bride-history {
+    text-align: right;
+    margin-bottom: 20px;
+
+    margin-top: 30px;
+    .tittle-history {
+      color: #ffffff;
+      text-align: center;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 25px;
+    }
+    .text-groom {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: lighter;
+    }
+    .button-whatsapp {
+      background-color: transparent;
+      border: solid 1px #ffffff;
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .button-whatsapp:hover{
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 

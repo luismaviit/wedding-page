@@ -7,6 +7,23 @@ function App() {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
     window.open(url, "_blank");
   };
+  const openWhatsApp = (n) => {
+    if (n === 1) {
+      const phoneNumber = "+573128994670"; // Reemplaza con el número de teléfono deseado
+      const message = "¡Hola! Ruben quiero felicitarte"; // Mensaje predeterminado (opcional)
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        message
+      )}`;
+      window.open(url, "_blank");
+    } if (n === 2) {
+      const phoneNumber = "+573128994670"; // Reemplaza con el número de teléfono deseado
+      const message = "¡Hola! Keren quiero felicitarte"; // Mensaje predeterminado (opcional)
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        message
+      )}`;
+      window.open(url, "_blank");
+    }
+  };
   return (
     <>
       <div className="hero">
@@ -56,26 +73,64 @@ function App() {
         <div className="row row-biblical-quotation">
           <div className="col biblical-quotation">
             <h3 className="biblical-text">
-              El amor es sufrido, es benigno; el amor no tiene envidia, el amor{" "}
+              Ponme como un sello sobre tu corazón, <br />
+              como una marca sobre tu
               <br />
-              no es jactancioso, no se envanece; no hace nada indebido, no busca
+              brazo; Porque fuerte es como la muerte el amor.
               <br />
-              lo suyo, no se irrita, no guarda rencor; no se goza de la
-              <br />
-              injusticia, mas se goza de la verdad. Todo lo sufre, todo lo cree,
-              <br />
-              todo lo espera, todo lo soporta.
             </h3>
-            <h1>Corintios 13:4-8</h1>
+            <h1>Cantares 8:6</h1>
+            <h3 className="biblical-text">Mejores son dos que uno.</h3>
+            <h1>Eclesiastés 4:9</h1>
           </div>
         </div>
-        <div className="row">
-          <div className="col-4">Column</div>
-          <div className="col-8">Column</div>
+        <div className="row bride-groom-info ">
+          <div className="col-xl-4  col-sm-12">
+            <img
+              className="image-bride-groom"
+              src="https://res.cloudinary.com/rawwshak/image/upload/v1724252163/7106_o4zn6i.jpg"
+              alt="The groom"
+            />
+          </div>
+          <div className="col-xl-8 col-sm-12 groom-history">
+            <span className="tittle-history">El novio</span>
+            <p className="text-groom">
+              Steffen quiere mucho a su pareja. Son como mejores amigos y se
+              <br />
+              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
+              <br />
+              recuerdos especiales. Steffen está agradecido de tener una pareja
+              <br />
+              tan maravillosa a la que amar y por la que dejarse amar.
+            </p>
+            <button className="button-whatsapp" onClick={()=>openWhatsApp(1)}>
+              Felicita el novio <i class="bi bi-whatsapp"></i>
+            </button>
+          </div>
         </div>
-        <div className="row">
-          <div className="col-8">Column</div>
-          <div className="col-4">Column</div>
+        <div className="row bride-groom-info">
+          <div className="col-xl-8 col-sm-12 bride-history">
+            <span className="tittle-history">La novia</span>
+            <p className="text-groom">
+              Steffen quiere mucho a su pareja. Son como mejores amigos y se
+              <br />
+              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
+              <br />
+              recuerdos especiales. Steffen está agradecido de tener una pareja
+              <br />
+              tan maravillosa a la que amar y por la que dejarse amar.
+            </p>
+            <button className="button-whatsapp" onClick={()=>openWhatsApp(2)}>
+              Felicita la novia <i class="bi bi-whatsapp"></i>
+            </button>
+          </div>
+          <div className="col-xl-4  col-sm-12">
+            <img
+              className="image-bride-groom"
+              src="https://res.cloudinary.com/rawwshak/image/upload/v1724252209/31652_ejreqi.jpg"
+              alt="The groom"
+            />
+          </div>
         </div>
       </div>
 
@@ -93,6 +148,7 @@ function App() {
         <div className="button-section">
           <button onClick={openGoogleMaps} className="route-button">
             Iniciar Ruta
+            <i className="bi bi-sign-turn-slight-right-fill"></i>
           </button>
         </div>
       </div>
