@@ -18,10 +18,31 @@ function App() {
             </h1>
           </div>
           <div className="two-section">
-            <h3 className="date"> 16</h3>
-            <h1 className="day-wedding"> Nov</h1>
-            <h3 className="date"> 2024</h3>
+            <h3 className="date"> 16 Nov 2024</h3>
           </div>
+        </div>
+      </div>
+      {/* informacion parejas */}
+      <div className="container-fluid ">
+        <div className="row row-biblical-quotation">
+          <div className="col biblical-quotation">
+            <h3 className="biblical-text">
+              El amor es sufrido, es benigno; el amor no tiene envidia, el amor <br/>
+              no es jactancioso, no se envanece; no hace nada indebido, no busca<br/>
+              lo suyo, no se irrita, no guarda rencor; no se goza de la<br/>
+              injusticia, mas se goza de la verdad. Todo lo sufre, todo lo cree,<br/>
+              todo lo espera, todo lo soporta.
+            </h3>
+            <h1>Corintios 13:4-8</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">Column</div>
+          <div className="col-8">Column</div>
+        </div>
+        <div className="row">
+          <div className="col-8">Column</div>
+          <div className="col-4">Column</div>
         </div>
       </div>
 

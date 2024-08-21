@@ -6,7 +6,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 1)
+    ),
     url("https://res.cloudinary.com/rawwshak/image/upload/v1724101592/338_n3lovd.jpg");
   height: 100vh;
   width: 100%;
@@ -48,7 +54,7 @@
 }
 .date {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: lighter;
 }
 
@@ -100,6 +106,28 @@
 
 .route-button:hover {
   background-color: #0056b3;
+}
+.container-info {
+  background-color: black;
+}
+.row-biblical-quotation {
+  text-align: center;
+  background-color: black;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  .biblical-quotation {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .biblical-text{
+    font-style: italic;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: lighter;
+  }
 }
 
 @media (max-width: 1080px) {
