@@ -167,6 +167,11 @@ function App() {
       </div>
 
       {/* Formulario de asistencia */}
+
+         {/* footer */}
+         <footer className="footer-container">
+          Hecho por  <a href="https://github.com/luismaviit" className="anchor"> luismaviit</a> <i className="bi bi-github icon-github"></i>
+         </footer>
     </>
   );
 }
