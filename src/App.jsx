@@ -223,17 +223,24 @@ function App() {
             </div>
             <button className="confirm-assistance">confirmar asistencia</button>
           </div>
-          <div className="col-xl-6 col-sm-12">
-            <h3 className="">Instrucciones</h3>
-            <p className="">
-              Steffen quiere mucho a su pareja. Son como mejores amigos y se
-              <br />
-              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
-              <br />
-              recuerdos especiales. Steffen está agradecido de tener una pareja
-              <br />
-              tan maravillosa a la que amar y por la que dejarse amar.
-            </p>
+          <div className="col-xl-6 col-sm-12 instructions">
+            <h3 className="tittle-instructions">Instrucciones</h3>
+            <em>
+              <div className="wrapper-intructions">
+                <span className="span-intructions">•</span>
+                <p className="guide-instructions">
+                  El codigo a digitar es la primera iniciar de tu nombre + los 4
+                  ultimos digitos de tu celular ejemplo: Z2345.
+                </p>
+              </div>
+              <div className="wrapper-intructions">
+                <span className="span-intructions">•</span>
+                <p className="guide-instructions">
+                  Debes escoger un regalo, en caso de no escoger uno,
+                  seleccionar lluvia de sobre.
+                </p>
+              </div>
+            </em>
           </div>
         </div>
       </div>

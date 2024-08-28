@@ -245,6 +245,7 @@
     text-align: center;
     color: #ffffff;
     margin-bottom: 40px;
+    font-weight: bold;
   }
 
   .confirm-assistance{
@@ -263,6 +264,25 @@
   .confirm-assistance:hover {
     background-color: #0056b3;
     background-color: rgba(255, 255, 255, 0.3);
+  }
+  .instructions{
+    
+    .tittle-instructions{
+      color: #ffffff;
+    }
+   .wrapper-intructions{
+    display: flex;
+    flex-direction:row;
+    gap: 8px;
+    .span-intructions{
+      color: #ffffff;
+    }
+    .guide-instructions{
+      color: #ffffff;
+    }
+   }
+   
+    
   }
 }
 .footer-container {
