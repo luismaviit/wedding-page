@@ -1,7 +1,20 @@
+import React from "react";
 import "./App.css";
 import { Link } from "react-scroll";
 
 function App() {
+  const [gift, setGift] = React.useState([]);
+  async function getGift() {
+    const response = await fetch("https://wedding-od29.onrender.com/presents");
+    const data = await response.json();
+    setGift(data);
+  }
+  React.useEffect(() => {
+    if (gift.length == 0) {
+      getGift();
+    }
+  }, []);
+
   const openGoogleMaps = () => {
     const destination = "11.0400684,-74.9122979"; // Coordenadas de destino (latitud, longitud)
     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
@@ -30,9 +43,13 @@ function App() {
     const eventLocation = "Casa Campestre El Lote, Barranquilla, Colombia";
     const eventDetails = "No te pierdas la boda de Keren y Ruben.";
     const startDate = "20241116T210000Z"; // 16 de noviembre de 2024, 4:00 PM hora Colombia (UTC-5)
-    const endDate = "20241116T230000Z";   // 16 de noviembre de 2024, 6:00 PM hora Colombia (UTC-5)
+    const endDate = "20241116T230000Z"; // 16 de noviembre de 2024, 6:00 PM hora Colombia (UTC-5)
 
-    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+      eventTitle
+    )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
+      eventDetails
+    )}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
     window.open(url, "_blank");
   };
   return (
@@ -76,7 +93,10 @@ function App() {
           </div>
           <div className="two-section">
             <h3 className="date"> 16 Nov 2024</h3>
-            <button className="button-calendar" onClick={addGoogleCalendarEvent}>
+            <button
+              className="button-calendar"
+              onClick={addGoogleCalendarEvent}
+            >
               Agregar al calendario
               <i className="bi bi-calendar-plus-fill icon-calendar"></i>
             </button>
@@ -117,7 +137,7 @@ function App() {
               tan maravillosa a la que amar y por la que dejarse amar.
             </p>
             <button className="button-whatsapp" onClick={() => openWhatsApp(1)}>
-              Felicita el novio <i class="bi bi-whatsapp"></i>
+              Felicita el novio <i className="bi bi-whatsapp"></i>
             </button>
           </div>
         </div>
@@ -134,7 +154,7 @@ function App() {
               tan maravillosa a la que amar y por la que dejarse amar.
             </p>
             <button className="button-whatsapp" onClick={() => openWhatsApp(2)}>
-              Felicita la novia <i class="bi bi-whatsapp"></i>
+              Felicita la novia <i className="bi bi-whatsapp"></i>
             </button>
           </div>
           <div className="col-xl-4  col-sm-12">
@@ -167,11 +187,66 @@ function App() {
       </div>
 
       {/* Formulario de asistencia */}
+      <div className="container-fluid ">
+        <div className="row assistance">
+          <div className="row">
+            <div className="col-xl-12  col-sm-12">
+              <h1 className="tittle-assistance">Confirmacion de Asistencia</h1>
+            </div>
+          </div>
 
-         {/* footer */}
-         <footer className="footer-container">
-          Hecho por  <a href="https://github.com/luismaviit" className="anchor"> luismaviit</a> <i className="bi bi-github icon-github"></i>
-         </footer>
+          <div className="col-xl-6  col-sm-12">
+            <div className="input-group mb-3">
+              <span className="input-group-text" id="basic-addon1">
+                <i className="bi bi-upc-scan"></i>
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="CÓDIGO"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div className="input-group mb-3">
+              <span className="input-group-text" id="basic-addon1">
+                <i class="bi bi-gift-fill"></i>
+              </span>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona un regalo de la lista</option>
+                {gift.map((item, key) => (
+                  <option value="1" style={{ color: "white" }}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button className="confirm-assistance">confirmar asistencia</button>
+          </div>
+          <div className="col-xl-6 col-sm-12">
+            <h3 className="">Instrucciones</h3>
+            <p className="">
+              Steffen quiere mucho a su pareja. Son como mejores amigos y se
+              <br />
+              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
+              <br />
+              recuerdos especiales. Steffen está agradecido de tener una pareja
+              <br />
+              tan maravillosa a la que amar y por la que dejarse amar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <footer className="footer-container">
+        Hecho por{" "}
+        <a href="https://github.com/luismaviit" className="anchor">
+          {" "}
+          luismaviit
+        </a>{" "}
+        <i className="bi bi-github icon-github"></i>
+      </footer>
     </>
   );
 }
