@@ -243,7 +243,7 @@ function App() {
         <div className="row assistance">
           <div className="row">
             <div className="col-xl-12  col-sm-12">
-              <h1 className="tittle-assistance">Confirmacion de Asistencia</h1>
+              <h1 className="tittle-assistance">Confirmación de Asistencia</h1>
             </div>
           </div>
 
@@ -287,8 +287,8 @@ function App() {
             </button>
           </div>
           <div className="col-xl-6 col-sm-12 instructions">
-            <h3 className="tittle-instructions">Instrucciones</h3>
-            <em>
+{/*             <h3 className="tittle-instructions">Instrucciones</h3>
+ */}            <em>
               <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
