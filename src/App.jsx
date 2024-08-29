@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.css";
 import { Link } from "react-scroll";
+import { presentConfirm } from "./helper";
 
 function App() {
   const [gift, setGift] = React.useState([]);
+  const [selectedGift, setSelectedGift] = React.useState();
+  const [code, setCode] = React.useState();
+  const [confirm, setConfirm] = React.useState(null);
+  const [requestMessage, setRequestMessage] = React.useState(null);
+
   async function getGift() {
     const response = await fetch("https://wedding-od29.onrender.com/presents");
     const data = await response.json();
@@ -14,6 +20,52 @@ function App() {
       getGift();
     }
   }, []);
+
+  function showDialog(confirm) {
+    if (confirm == null) {
+      return null;
+    } else if (confirm == true) {
+      return (
+        <div className="alert alert-success form-alert" role="alert">
+          Confirmación exitosa
+        </div>
+      );
+    } else if (confirm == false) {
+      return (
+        <div class="alert alert-danger form-alert" role="alert">
+          Error al confirmar, por favor vuelva a intentar
+        </div>
+      );
+    }
+  }
+
+  const handleConfirmation = async () => {
+    const dataPresent = {
+      code: code,
+      presentId: parseInt(selectedGift),
+      confirm: true,
+    };
+    const response = presentConfirm(dataPresent).then((response) => {
+      console.log("esto", response);
+      if (response.message) {
+        setConfirm(true);
+        setRequestMessage(response.message);
+      } else if (response.error) {
+        setConfirm(false);
+        setRequestMessage(response.error);
+      }
+    });
+
+    /*  try {
+      const response = await presentConfirm(dataPresent);
+      console.log("todo salio bien", response);
+      setConfirm(true);
+      setRequestMessage(response.message);
+    } catch (error) {
+      setConfirm(false);
+      setRequestMessage(error.Error);
+    } */
+  };
 
   const openGoogleMaps = () => {
     const destination = "11.0400684,-74.9122979"; // Coordenadas de destino (latitud, longitud)
@@ -70,10 +122,10 @@ function App() {
           </Link>
           <Link
             activeClass="active"
-            to="route"
+            to="confirm-assistance"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={0}
             duration={500}
           >
             {" "}
@@ -167,7 +219,7 @@ function App() {
         </div>
       </div>
 
-      {/* Sección del Mapa debajo del Hero */}
+      {/* Sección del mapa */}
       <div id="route" className="map-section">
         <iframe
           className="map-iframe"
@@ -187,7 +239,7 @@ function App() {
       </div>
 
       {/* Formulario de asistencia */}
-      <div className="container-fluid ">
+      <div id="confirm-assistance" className="container-fluid ">
         <div className="row assistance">
           <div className="row">
             <div className="col-xl-12  col-sm-12">
@@ -195,7 +247,7 @@ function App() {
             </div>
           </div>
 
-          <div className="col-xl-6  col-sm-12">
+          <div className="col-xl-6  col-sm-12 form-options">
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
                 <i className="bi bi-upc-scan"></i>
@@ -203,25 +255,36 @@ function App() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="CÓDIGO"
+                placeholder="Código de invitación"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                onChange={(event) => setCode(event.target.value)}
               />
             </div>
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
                 <i class="bi bi-gift-fill"></i>
               </span>
-              <select class="form-select" aria-label="Default select example">
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                onChange={(event) => setSelectedGift(event.target.value)}
+              >
                 <option selected>Selecciona un regalo de la lista</option>
                 {gift.map((item, key) => (
-                  <option value="1" style={{ color: "white" }}>
+                  <option value={item.id} style={{ color: "white" }}>
                     {item.name}
                   </option>
                 ))}
               </select>
             </div>
-            <button className="confirm-assistance">confirmar asistencia</button>
+            <button
+              className="confirm-assistance"
+              onClick={handleConfirmation}
+              //onClick={() => console.log(code)}
+            >
+              confirmar asistencia
+            </button>
           </div>
           <div className="col-xl-6 col-sm-12 instructions">
             <h3 className="tittle-instructions">Instrucciones</h3>
@@ -229,8 +292,8 @@ function App() {
               <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
-                  El codigo a digitar es la primera iniciar de tu nombre + los 4
-                  ultimos digitos de tu celular ejemplo: Z2345.
+                  El codigo de invitación a digitar es la primera iniciar de tu
+                  nombre + los 4 ultimos digitos de tu celular ejemplo: Z2345.
                 </p>
               </div>
               <div className="wrapper-intructions">
@@ -240,8 +303,27 @@ function App() {
                   seleccionar lluvia de sobre.
                 </p>
               </div>
+              <div className="wrapper-intructions">
+                <p className="guide-instructions">
+                  <strong> Nota : </strong>si presentas algun problema con el
+                  codigo de invitación, por favor comunicarte con algunos de los
+                  novios.
+                </p>
+              </div>
             </em>
           </div>
+
+          {confirm == null ? (
+            <></>
+          ) : confirm == true ? (
+            <div className="alert alert-success form-alert" role="alert">
+              {requestMessage}
+            </div>
+          ) : (
+            <div class="alert alert-danger form-alert" role="alert">
+              {requestMessage}
+            </div>
+          )}
         </div>
       </div>
 

@@ -241,6 +241,10 @@
   background-color: #000;
   padding: 2rem;
 
+  .form-options{
+    gap: 50xp;
+  }
+
   .tittle-assistance {
     text-align: center;
     color: #ffffff;
@@ -266,7 +270,7 @@
     background-color: rgba(255, 255, 255, 0.3);
   }
   .instructions{
-    
+    margin-top: 20px;
     .tittle-instructions{
       color: #ffffff;
     }
@@ -280,10 +284,14 @@
     .guide-instructions{
       color: #ffffff;
     }
-   }
-   
-    
+   }  
   }
+  .form-alert{
+    z-index:100;
+    position: relative;
+    text-align: center;
+
+   }
 }
 .footer-container {
   height: 35px;
