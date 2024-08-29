@@ -1,8 +1,8 @@
 #root {
   margin: 0 auto;
-  font-family: "Baskervville SC", serif;
+  /* font-family: "Baskervville SC", serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal; */
 }
 .hero {
   position: relative;
@@ -54,11 +54,12 @@
 }
 .sub-tittle {
   color: #ffffff;
-  border: solid 2px #ffffff;
+ 
   padding: 1rem;
   border-radius: 20px;
 }
 .tittle-hero {
+  font-family: "Dancing Script", cursive;
   margin-top: 30px;
   color: #ffffff;
   font-size: 250px;
@@ -161,8 +162,9 @@
     margin-bottom: 30px;
   }
   .biblical-text {
+    margin-top: 40px;
     font-style: italic;
-    font-size: 50px;
+    font-size: 20px;
     font-style: italic;
     font-weight: lighter;
   }
@@ -297,7 +299,7 @@
    }
 }
 .footer-container {
-  height: 35px;
+  height: 25px;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.4),
@@ -333,7 +335,7 @@
     font-size: 90px;
   }
   .tittles-hero {
-    margin-bottom: -500px;
+    margin-bottom:0px;
   }
 }
 @media (max-width: 768px) {

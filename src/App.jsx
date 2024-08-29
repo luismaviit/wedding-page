@@ -137,13 +137,13 @@ function App() {
         </nav>
         <div className="hero-content">
           <div className="tittles-hero">
-            <span className="sub-tittle"> La boda de ...</span>
+            <span className="sub-tittle">Nuestra boda</span>
             <h1 className="tittle-hero">
               Ruben & <br />
               Keren
             </h1>
           </div>
-          <div className="two-section">
+          {/* <div className="two-section">
             <h3 className="date"> 16 Nov 2024</h3>
             <button
               className="button-calendar"
@@ -152,7 +152,7 @@ function App() {
               Agregar al calendario
               <i className="bi bi-calendar-plus-fill icon-calendar"></i>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* informacion parejas */}
