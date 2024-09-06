@@ -77,9 +77,9 @@
     border: solid 1px #ffffff;
     color: #ffffff;
     border-radius: 20px;
-    padding: 1rem;
-    cursor: pointer;
-    gap: 10px;
+    padding: 0.4rem;
+    cursor: pointer;   
+    font-size: 8;
 
     .icon-calendar {
       margin-left: 10px;
@@ -369,7 +369,7 @@
    font-size: 30px;
   }
   .date {
-    font-size: 30px;
+    font-size: 20px;
   }
   .day-wedding {
     font-size: 60px;
@@ -381,7 +381,7 @@
     font-size: 70px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
   .date {
-    font-size: 30px;
+    font-size: 20px;
   }
   .day-wedding {
     font-size: 50px;
