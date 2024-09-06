@@ -272,7 +272,7 @@ function App() {
               >
                 <option selected>Selecciona un regalo de la lista</option>
                 {gift.map((item, key) => (
-                  <option value={item.id} style={{ color: "white" }}>
+                  <option value={item.id} >
                     {item.name}
                   </option>
                 ))}
