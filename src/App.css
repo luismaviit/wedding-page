@@ -45,12 +45,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 50px;
+  gap: 0px;
   padding: 3rem;
 }
 .tittles-hero {
   text-align: left;
-  margin-bottom: -160px;
+  margin-bottom: -100px;
 
 }
 .sub-tittle {
@@ -63,10 +63,10 @@
   color: #ffffff;
   font-size: 250px;
   line-height: 0.8;
-  margin-bottom: 90px;
+  margin-bottom: 0px;
 }
 .two-section {
-  margin-top: 20px;
+  margin-top: 0px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -91,7 +91,7 @@
 }
 .date {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: lighter;
 }
 
@@ -328,7 +328,7 @@
     font-size: 200px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
   .date {
-    font-size: 40px;
+    font-size: 30px;
   }
   .day-wedding {
     font-size: 90px;
@@ -342,7 +342,7 @@
     font-size: 180px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
   .date {
-    font-size: 40px;
+    font-size: 30px;
   }
   .day-wedding {
     font-size: 80px;
@@ -369,7 +369,7 @@
    font-size: 30px;
   }
   .date {
-    font-size: 35px;
+    font-size: 30px;
   }
   .day-wedding {
     font-size: 60px;

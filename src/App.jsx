@@ -143,8 +143,8 @@ function App() {
               Keren
             </h1>
           </div>
-          {/* <div className="two-section">
-            <h3 className="date"> 16 Nov 2024</h3>
+          <div className="two-section">
+            <h3 className="date"> 16 Nov 2024 / 4:00 P.M </h3>
             <button
               className="button-calendar"
               onClick={addGoogleCalendarEvent}
@@ -152,7 +152,7 @@ function App() {
               Agregar al calendario
               <i className="bi bi-calendar-plus-fill icon-calendar"></i>
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
       {/* informacion parejas */}
@@ -287,8 +287,9 @@ function App() {
             </button>
           </div>
           <div className="col-xl-6 col-sm-12 instructions">
-{/*             <h3 className="tittle-instructions">Instrucciones</h3>
- */}            <em>
+            {/*             <h3 className="tittle-instructions">Instrucciones</h3>
+             */}{" "}
+            <em>
               <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
@@ -296,7 +297,7 @@ function App() {
                   nombre + los 4 ultimos digitos de tu celular ejemplo: Z2345.
                 </p>
               </div>
-             {/*  <div className="wrapper-intructions">
+              {/*  <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
                   Debes escoger un regalo, en caso de no escoger uno,
