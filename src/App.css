@@ -16,7 +16,7 @@
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 1)
     ),
-    url("https://res.cloudinary.com/rawwshak/image/upload/v1724101592/338_n3lovd.jpg");
+    url("https://res.cloudinary.com/rawwshak/image/upload/v1725638244/IMG-20240820-WA0051-hero_aj1nlf.jpg");
   height: 100vh;
   width: 100%;
 }
@@ -51,12 +51,11 @@
 .tittles-hero {
   text-align: left;
   margin-bottom: -160px;
+
 }
 .sub-tittle {
   color: #ffffff;
- 
-  padding: 1rem;
-  border-radius: 20px;
+ font-size: 3rem;
 }
 .tittle-hero {
   font-family: "Dancing Script", cursive;
@@ -177,7 +176,7 @@
 
   .image-bride-groom {
     width: 100%;
-    height: auto;
+    height: 380px;
     max-width: 100%;
     object-fit: cover;
     border-radius: 0px 50px 0px 50px;
@@ -364,6 +363,10 @@
 @media (max-width: 500px) {
   .tittle-hero {
     font-size: 100px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+  .sub-tittle {
+  font-weight: lighter;
+   font-size: 30px;
   }
   .date {
     font-size: 35px;

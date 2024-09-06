@@ -173,7 +173,7 @@ function App() {
           <div className="col-xl-4  col-sm-12">
             <img
               className="image-bride-groom"
-              src="https://res.cloudinary.com/rawwshak/image/upload/v1724252163/7106_o4zn6i.jpg"
+              src="https://res.cloudinary.com/rawwshak/image/upload/v1725638617/ruben-profile_oucaao.jpg"
               alt="The groom"
             />
           </div>
@@ -212,7 +212,7 @@ function App() {
           <div className="col-xl-4  col-sm-12">
             <img
               className="image-bride-groom"
-              src="https://res.cloudinary.com/rawwshak/image/upload/v1724252209/31652_ejreqi.jpg"
+              src="https://res.cloudinary.com/rawwshak/image/upload/v1725638665/keren_alz3s5.jpg"
               alt="The groom"
             />
           </div>
@@ -296,13 +296,13 @@ function App() {
                   nombre + los 4 ultimos digitos de tu celular ejemplo: Z2345.
                 </p>
               </div>
-              <div className="wrapper-intructions">
+             {/*  <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
                   Debes escoger un regalo, en caso de no escoger uno,
                   seleccionar lluvia de sobre.
                 </p>
-              </div>
+              </div> */}
               <div className="wrapper-intructions">
                 <p className="guide-instructions">
                   <strong> Nota : </strong>si presentas algun problema con el
