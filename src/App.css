@@ -22,8 +22,7 @@
 }
 .nav {
   display: flex;
-  gap: 20px;
-  padding: 3rem;
+  background-image: rgba(255, 255, 255, 0);
   justify-content: flex-end;
 }
 .span-button {
@@ -47,7 +46,6 @@
   align-items: flex-start;
   gap: 0px;
   padding: 3rem;
-  margin-top: 30px;
 }
 .tittles-hero {
   text-align: left;

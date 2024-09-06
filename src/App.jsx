@@ -32,7 +32,7 @@ function App() {
       );
     } else if (confirm == false) {
       return (
-        <div class="alert alert-danger form-alert" role="alert">
+        <div className="alert alert-danger form-alert" role="alert">
           Error al confirmar, por favor vuelva a intentar
         </div>
       );
@@ -107,7 +107,7 @@ function App() {
   return (
     <>
       <div className="hero">
-        <nav className="nav">
+        {/*  <nav className="nav">
           <Link
             activeClass="active"
             to="route"
@@ -134,6 +134,62 @@ function App() {
               <i className="bi bi-check-circle-fill"></i>
             </span>
           </Link>
+        </nav> */}
+        <nav className="nav navbar navbar-expand-lg fixed-top navbar-dark ">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">
+        {/*       Navbar */}
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="nav collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">
+                    <Link
+                      activeClass="active"
+                      to="route"
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={500}
+                    >
+                      <span className="span-button">
+                        como llegar <i className="bi bi-geo-alt-fill"></i>
+                      </span>
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    <Link
+                      activeClass="active"
+                      to="confirm-assistance"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                    >
+                      {" "}
+                      <span className="span-button">
+                        confirmar asistencia
+                        <i className="bi bi-check-circle-fill"></i>
+                      </span>
+                    </Link>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <div className="hero-content">
           <div className="tittles-hero">
@@ -180,13 +236,19 @@ function App() {
           <div className="col-xl-8 col-sm-12 groom-history">
             <span className="tittle-history">El novio</span>
             <p className="text-groom">
-              Steffen quiere mucho a su pareja. Son como mejores amigos y se
+              Rubén quiere mucho a Keren. Son su mayor apoyo y su mejor amiga.
+              Juntos
               <br />
-              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
+              han compartido innumerables momentos que atesora en su corazón.
+              Cada día a su lado es una
               <br />
-              recuerdos especiales. Steffen está agradecido de tener una pareja
+              aventura llena de amor y risas. Rubén se siente afortunado de
+              poder compartir su vida con una
               <br />
-              tan maravillosa a la que amar y por la que dejarse amar.
+              persona tan especial como Keren, a quien ama profundamente y con
+              quien sueña construir un
+              <br />
+              futuro lleno de felicidad.
             </p>
             <button className="button-whatsapp" onClick={() => openWhatsApp(1)}>
               Felicita el novio <i className="bi bi-whatsapp"></i>
@@ -197,13 +259,19 @@ function App() {
           <div className="col-xl-8 col-sm-12 bride-history">
             <span className="tittle-history">La novia</span>
             <p className="text-groom">
-              Steffen quiere mucho a su pareja. Son como mejores amigos y se
+              Keren siente un profundo amor por Rubén. A su lado ha encontrado a
+              su mejor
               <br />
-              hacen felices mutuamente. Pasan mucho tiempo juntos y tienen
+              amigo y confidente. Juntos han creado recuerdos inolvidables, y
+              cada día que pasa, su amor solo
               <br />
-              recuerdos especiales. Steffen está agradecido de tener una pareja
+              crece. Rubén es su compañero ideal, con quien sueña construir una
+              vida llena de alegrías y
               <br />
-              tan maravillosa a la que amar y por la que dejarse amar.
+              aventuras. Keren está agradecida por el amor y la felicidad que
+              comparten, y no puede esperar a
+              <br />
+              vivir cada nuevo capítulo juntos.
             </p>
             <button className="button-whatsapp" onClick={() => openWhatsApp(2)}>
               Felicita la novia <i className="bi bi-whatsapp"></i>
@@ -263,18 +331,16 @@ function App() {
             </div>
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
-                <i class="bi bi-gift-fill"></i>
+                <i className="bi bi-gift-fill"></i>
               </span>
               <select
-                class="form-select"
+                className="form-select"
                 aria-label="Default select example"
                 onChange={(event) => setSelectedGift(event.target.value)}
               >
                 <option selected>Selecciona un regalo de la lista</option>
                 {gift.map((item, key) => (
-                  <option value={item.id} >
-                    {item.name}
-                  </option>
+                  <option value={item.id}>{item.name}</option>
                 ))}
               </select>
             </div>
@@ -321,7 +387,7 @@ function App() {
               {requestMessage}
             </div>
           ) : (
-            <div class="alert alert-danger form-alert" role="alert">
+            <div className="alert alert-danger form-alert" role="alert">
               {requestMessage}
             </div>
           )}
