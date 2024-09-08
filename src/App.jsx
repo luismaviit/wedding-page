@@ -356,13 +356,13 @@ function App() {
             {/*             <h3 className="tittle-instructions">Instrucciones</h3>
              */}{" "}
             <em>
-              <div className="wrapper-intructions">
+              {/* <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
                   El codigo de invitación a digitar es la primera iniciar de tu
                   nombre + los 4 ultimos digitos de tu celular ejemplo: Z2345.
                 </p>
-              </div>
+              </div> */}
               {/*  <div className="wrapper-intructions">
                 <span className="span-intructions">•</span>
                 <p className="guide-instructions">
@@ -370,13 +370,13 @@ function App() {
                   seleccionar lluvia de sobre.
                 </p>
               </div> */}
-              <div className="wrapper-intructions">
+              {/* <div className="wrapper-intructions">
                 <p className="guide-instructions">
                   <strong> Nota : </strong>si presentas algun problema con el
                   codigo de invitación, por favor comunicarte con algunos de los
                   novios.
                 </p>
-              </div>
+              </div> */}
             </em>
           </div>
 
